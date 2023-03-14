@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #B298FF;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 800px; /* only for demonstration, should be removed */
+  background: #C2CFFF;
+  padding: 20px;
+  
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #black;
+  height: 800px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Cities</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Seoul</a></li>
+      <li><a href="#">Florence</a></li>
+      <li><a href="#">Rio De Janerio</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Seoul</h1>
+    <p>Seoul is the capital of South Korea home to sleek skyscrapers and shopping malls, as well as well-preserved royal palaces and Buddhist temples.</p>
+    <p>A 24-hour city, Seoul has an intense work-hard, play-hard culture. The booming metropolis fuses tradition and modernity. Seoul citizens have a deep respect for higher ranking individuals and pride in their venerable city.</p><img src= "https://media.istockphoto.com/id/521707831/photo/seoul-south-korea-skyline.jpg?b=1&s=170667a&w=0&k=20&c=dM_aBlHvbytMf8-8ftgA-GSMMjeXeRrKemfaTxCTXAI=" width="200">
+    
+     <h1>Florence</h1>
+    <p>Florence, capital of Italy’s Tuscany region, is home to many masterpieces of Renaissance art and architecture. One of its most iconic sights is the Duomo, a cathedral with a terracotta-tiled dome engineered by Brunelleschi and a bell tower by Giotto.</p>
+    <p>
+The city also contains numerous museums and art galleries, such as the Uffizi Gallery and the Palazzo Pitti, and still exerts an influence in the fields of art, culture and politics.</p><img src= "https://media.timeout.com/images/105879414/image.jpg" width="200">
+    
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
